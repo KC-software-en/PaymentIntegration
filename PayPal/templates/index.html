@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <!-- Download Bootstrap-->
+	<!--link bootstrap first
+	Else, it display as internal CSS not external CSS. This way custom style overrides bootstrap if needed.-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">	
+	<!--Note: link to use icons must be in base template to work in child templates)-->	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<!--link css -->
+    <!--NOTE:internal CSS from parent/base template is used in child template that extends it;-->
+	<!--NOTE: the url to stylesheet & palcement of '/'; this renders external css correctly-->
+	<link href="{% static 'CSS/StyleSheet.css' %}" rel = "stylesheet" type = "text/css"> 
+	<!-- required meta tags
+	incl encoding
+	incl responsive view for mobile devices-->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Payment Gateway</title>	
+</head>
+
+<body>                    
+    {% block content %}
+    <!--use a flex container -->
+    <!--vertically center with align-->
+    <!--horizonatally center with justify -->
+    <!-- place card text in the center -->
+    <div class="container-fluid d-flex align-items-center justify-content-center text-center vh-100">
+        <div class="row">			
+            <div class = "col">
+                <div class="card" style="width: 30rem; border-color: blue;">		
+                    <div class="card-body" id="no-underline">
+                        <!--add a margin below the card-title -->
+                        <!--place a heading in italics-->
+                        <h1 class="card-title mb-4"><i>Checkout</i></h1>
+                        
+                        <!-- a form to request user input -->
+                        <form id="payment-form">
+                            <!--add the csrf_token to all post forms targeted at internal urls to protect against Cross Site Forgery-->
+                            {% csrf_token %}
+
+                            <!-- user name -->
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" class="mb-4" required>
+                            <br>
+                        
+                            <!-- user email -->
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="mb-4" required>
+                            <br>
+                        
+                            <!-- amount 
+                                ensure the value can (de)/(in)crease by 0.01-->
+                            <label for="amount">Amount (USD):</label>
+                            <input type="number" id="amount" name="amount" step="0.01" class="mb-4" required>
+                            <br>
+                        
+                            <!-- paypal button-->
+                            <button class="btn btn-warning" >
+                                <span>
+                                    <i class="bi bi-paypal" style="color: blue;"> Checkout with PayPal</i>
+                                </span>
+                            </button>
+                                <br>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    {% endblock %}
+        
+</body>
