@@ -13,8 +13,8 @@ def configure_paypal():
     :rtype: paypalrestsdk.Api
     """
     # get the client ID and client secret from environment variables
-    client_id = os.environ.get('PAYPAL_CLIENT_ID')
-    client_secret = os.environ.get('PAYPAL_CLIENT_SECRET')
+    client_id = os.getenv('PAYPAL_CLIENT_ID')
+    client_secret = os.getenv('PAYPAL_CLIENT_SECRET')
 
     # configure the PayPal SDK with the client ID and client secret
     paypalrestsdk.configure({
