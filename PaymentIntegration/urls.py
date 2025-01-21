@@ -22,5 +22,5 @@ from django.urls import path, include
 # use empty str for home app
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('PayPal.urls'))
+    path('payment/', include('PayPal.urls'))
 ]
