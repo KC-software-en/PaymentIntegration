@@ -1,9 +1,10 @@
+# import paypalrestsdk for PayPal methods that create, process & manage payments
 import paypalrestsdk
 
 # import os to access environment variables
 import os
 
-#####################################################################################
+##############################################################################################
 
 # configure paypal sdk
 def configure_paypal():
