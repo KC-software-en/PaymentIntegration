@@ -5,6 +5,8 @@ from django.http import JsonResponse
 from .utils import configure_paypal
 import paypalrestsdk
 
+import os
+
 ###############################################################################
 
 # configure paypal sdk
@@ -13,7 +15,8 @@ configure_paypal()
 # Create your views here.
 # create a view for the index template
 def index(request):
-    return render(request, 'payment/index.html')
+    context = {'PAYPAL_CLIENT_ID': os.getenv('PAYPAL_CLIENT_ID')}
+    return render(request, 'payment/index.html', context)
 
 # create a view for the payment
 def create_payment(request):
