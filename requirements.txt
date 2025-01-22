@@ -1,0 +1,17 @@
+asgiref==3.8.1
+certifi==2024.12.14
+cffi==1.17.1
+charset-normalizer==3.4.1
+cryptography==44.0.0
+Django==5.1.5
+idna==3.10
+paypalrestsdk==1.13.3
+pycparser==2.22
+pyOpenSSL==25.0.0
+python-dotenv==1.0.1
+requests==2.32.3
+six==1.17.0
+sqlparse==0.5.3
+typing_extensions==4.12.2
+tzdata==2024.2
+urllib3==2.3.0
