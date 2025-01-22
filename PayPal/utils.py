@@ -8,7 +8,6 @@ import os
 import os
 from dotenv import load_dotenv
 
-
 ##############################################################################################
 
 # configure paypal sdk
@@ -36,6 +35,4 @@ def configure_paypal():
         "client_id": client_id,
         "client_secret": client_secret
     })
-
-    # return the configured PayPal SDK
-    ##return paypalrestsdk.Api ## might remove
+    
