@@ -48,18 +48,18 @@ You will need to set up your custom Secret Key before running the website
     OR
     + python -m pip install -r requirements.txt
 
-1. Create business PayPal account (here)[https://developer.paypal.com/].
-1. Ensure you are in sandbox mode not live on the PayPal website (here)[https://developer.paypal.com/dashboard/applications/sandbox].
-1. Go to Apps & Credentials (here)[https://developer.paypal.com/dashboard/applications/sandbox].
+1. Create business PayPal account [here](https://developer.paypal.com/).
+1. Ensure you are in sandbox mode not live on the PayPal website [here](https://developer.paypal.com/dashboard/applications/sandbox).
+1. Go to Apps & Credentials [here](https://developer.paypal.com/dashboard/applications/sandbox).
 1. Create a REST API application, PaymentIntegration, for example.
-1. Save PaymentIntegration's client ID & client secret as PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET (without quotation marks) to a .env file in the root directory according to (this)[https://developer.paypal.com/studio/checkout/standard/getstarted?backend=python#setup-dev-environment] resource.
+1. Save PaymentIntegration's client ID & client secret as PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET (without quotation marks) to a .env file in the root directory according to [this](https://developer.paypal.com/studio/checkout/standard/getstarted?backend=python#setup-dev-environment) resource.
 1. Assign the PayPal mode as PAYPAL_MODE=sandbox in a .env where 'live' is only for production.
 
-1. Go to Sandbox test accounts (here)[https://developer.paypal.com/dashboard/accounts]
+1. Go to Sandbox test accounts [here](https://developer.paypal.com/dashboard/accounts)
 1. Create business & personal sandbox accounts.
 1. Save their emails & passwords in .env because you will enter their login details later.
 
-1. Visit the (sandbox)[https://sandbox.paypal.com].
+1. Visit the [sandbox](https://sandbox.paypal.com).
 1. Log into sandbox with the business sandbox account.
 
 # Usage section
@@ -67,7 +67,7 @@ You will need to set up your custom Secret Key before running the website
 
 In the Command Prompt:
 + Change directory to project root directory and run the command to start the local server: `python manage.py runserver`
-1. Go to the (homepage)[http://127.0.0.1:8000/payment/].
+1. Go to the [homepage](http://127.0.0.1:8000/payment/).
 1. Enter the name, email and amount you want to pay.
 1. Click on the PayPal button. If a blank pop-up opens, move it away from the PayPal payment gateway that opens directly behind it.
 1. Enter the enter personal sandbox account's email and password in the PayPal pop-up then complete the payment.
