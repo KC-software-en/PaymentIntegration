@@ -5,7 +5,6 @@ import paypalrestsdk
 import os
 
 # import load_dotenv to load environment variables from .env file
-import os
 from dotenv import load_dotenv
 
 ##############################################################################################
