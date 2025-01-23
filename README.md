@@ -5,12 +5,36 @@ PaymentIntegration
 
 *Importance of the project*
 
-1. **... Impact**:
+PaymentIntegration addresses the need for seamless and reliable payment processing in modern web applications. By implementing a backend payment processing system, it eliminates the complexities of integrating payment solutions while enhancing user experience through effective error handling and clear status messages. The project demonstrates the power of automation in software development through a CI/CD pipeline, enabling rapid deployment and maintaining code quality. Its impact lies in providing a blueprint for efficient payment integration, empowering developers to deliver secure, user-friendly payment solutions with minimal frictions.
 
 *What the project does*
 
-1. PaymentIntegration uses PayPal's REST API indirectly through their JavaScript SDK. The installed paypalrestsdk module interacts with PayPal REST API.
+PaymentIntegration is a backend payment system developed using the Django REST Framework. It integrates PayPal's REST API indirectly through their JavaScript SDK and the paypalrestsdk module for secure payment transactions. The system offers a RESTful API with versioning and status message, ensuring clarity and ease of use.
 
+**Backend Setup**
++	*Development*: Built with Django REST Framework to create RESTful APls for payment processing.
++	Payment Integration: Utilizes PayPal's REST API through their JavaScript SDK and paypalrestsk for managing transactions.
++	*Error Handling*: Communicates transaction outcomes effectively with detailed status messages to enhance user experience.
+CI/CD Pipeline on GitHub
++	*Test*: Uses Django's testing framework to perform status checks and the PayPal sandbox environment for verifying payment functionality.
++	*Build*: Ensures the application builds correctly and all dependencies are installed.
++	*Deploy*: Deploys the application to Heroku for easy accessibility.
+
+**Deliverables**
+
+1. *RESTful API*: A fully functional API for processing payments, featuring:
++	Versioning to manage updates efficiently.
++	No user authentication, focusing solely on payment processing.
++	Clear status messages for improved user interaction.
+
+1. *CI/CD Pipeline*: A GitHub Actions pipeline automating:
++	Testing for transaction verification and API functionality.
++	Deployment to Heroku, ensuring a streamlined release process.
+
+1. *Documentation*: Comprehensive guidelines covering:
++	Running the service locally.
++	Understanding and running tests.
++	Deploying the application using the CI/CD pipeline.
 
 # Installation section
 *Tell other users how to install your project locally*
@@ -53,7 +77,6 @@ You will need to set up your custom Secret Key before running the website
 1. Go to Apps & Credentials [here](https://developer.paypal.com/dashboard/applications/sandbox).
 1. Create a REST API application, PaymentIntegration, for example.
 1. Save PaymentIntegration's client ID & client secret as PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET (without quotation marks) to a .env file in the root directory according to [this](https://developer.paypal.com/studio/checkout/standard/getstarted?backend=python#setup-dev-environment) resource.
-1. Assign the PayPal mode as PAYPAL_MODE=sandbox in a .env where 'live' is only for production.
 
 1. Go to Sandbox test accounts [here](https://developer.paypal.com/dashboard/accounts)
 1. Create business & personal sandbox accounts.
@@ -68,7 +91,7 @@ You will need to set up your custom Secret Key before running the website
 In the Command Prompt:
 + Change directory to project root directory
 
-+ Run the command `python manage.py test PayPal` to perform the test for the status check of the PaymentIntegration homepage.
++ Go to the GitHub Actions tab in the [repository](https://github.com/KC-software-en/PaymentIntegration/actions) to view the workflow running. Expand the jobs that were ran. The Run Tests job will show that the test for the status check of the PaymentIntegration homepage was successful.
 
 1. Run the command to start the local server: `python manage.py runserver`
 1. Go to the [homepage](http://127.0.0.1:8000/payment/).
