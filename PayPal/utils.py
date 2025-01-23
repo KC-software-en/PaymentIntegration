@@ -22,15 +22,12 @@ def configure_paypal():
 
     # get the client ID, client secret & PayPal mode from environment variables
     client_id = os.getenv('PAYPAL_CLIENT_ID')    
-    client_secret = os.getenv('PAYPAL_CLIENT_SECRET')
-    print(client_id)
-    print(client_secret)
-    paypal_mode = os.getenv('PAYPAL_MODE')
-    print(paypal_mode)
+    client_secret = os.getenv('PAYPAL_CLIENT_SECRET')    
+    paypal_mode = os.getenv('PAYPAL_MODE')    
 
     # configure the PayPal SDK with the client ID and client secret
     paypalrestsdk.configure({
-        "mode": 'sandbox',#paypal_mode,  # sandbox or live
+        "mode": paypal_mode,  # sandbox or live 
         "client_id": client_id,
         "client_secret": client_secret
     })
