@@ -14,5 +14,12 @@ configure_paypal()
 
 # create a view for the index template
 def index(request):
+    """A homepage view to input the user's details for the PayPal transaction.
+
+    :param request: The HTTP request object containing information about the client's request.
+    :type request: HttpRequest
+    :return: Return the index template
+    :rtype: HttpResponse
+    """
     context = {'PAYPAL_CLIENT_ID': os.getenv('PAYPAL_CLIENT_ID')}    
     return render(request, 'payment/index.html', context)
