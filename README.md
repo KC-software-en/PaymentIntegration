@@ -31,7 +31,7 @@ Outline the steps necessary to build and run your application with venv:
         + cd to path to Scripts "C:\Users\path\to\PaymentVenv\Scripts"
         + `activate.bat`
    
-1. Download Python to run the program @ https://www.python.org/downloads/
+1. Download Python 3.11 to run the program @ https://www.python.org/downloads/
 1. Run the Python Installer
 1. Check the Box for "Add Python to PATH"
 In cmd:
@@ -66,11 +66,19 @@ You will need to set up your custom Secret Key before running the website
 *Instruct others on how to use your project after they’ve installed it*
 
 In the Command Prompt:
-+ Change directory to project root directory and run the command to start the local server: `python manage.py runserver`
++ Change directory to project root directory
+
++ Run the command `python manage.py test PayPal` to perform the test for the status check of the PaymentIntegration homepage.
+
+1. Run the command to start the local server: `python manage.py runserver`
 1. Go to the [homepage](http://127.0.0.1:8000/payment/).
 1. Enter the name, email and amount you want to pay.
 1. Click on the PayPal button. If a blank pop-up opens, move it away from the PayPal payment gateway that opens directly behind it.
+
+*You can test that the REST API works with sandbox credentials.*
 1. Enter the enter personal sandbox account's email and password in the PayPal pop-up then complete the payment.
+
+*A successfull test shows the transactions on the [sandbox](https://sandbox.paypal.com) site.*
 1. Login to sandbox with the personal sandbox account to see the transactions.
 1. Login to sandbox with the business sandbox account to see the transactions.
 
