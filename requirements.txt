@@ -4,7 +4,9 @@ cffi==1.17.1
 charset-normalizer==3.4.1
 cryptography==44.0.0
 Django==5.1.5
+gunicorn==23.0.0
 idna==3.10
+packaging==24.2
 paypalrestsdk==1.13.3
 pycparser==2.22
 pyOpenSSL==25.0.0
