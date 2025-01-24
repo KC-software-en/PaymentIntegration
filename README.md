@@ -62,6 +62,7 @@ In cmd:
 1. Verify pip installation: `pip --version`
 
 *Note: Django Secret Key is in the .env*
+
 You will need to set up your custom Secret Key before running the website.
 
 1. Clone this repository
@@ -154,7 +155,7 @@ https://github.com/KC-software-en/PaymentIntegration
 
 # Add a url to the PaymentIntegration website
 
-The GitHub Actions workflow was extended for deployment with Continuous Deployment. PaymentIntegration was deployed with Heroku and is available [here] (https://payment-integration-95c634bc5985.herokuapp.com/).
+The GitHub Actions workflow was extended for deployment with Continuous Deployment. PaymentIntegration was deployed with Heroku and is available [here](https://payment-integration-95c634bc5985.herokuapp.com/).
 
 # Resources
 
