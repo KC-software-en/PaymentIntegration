@@ -96,8 +96,7 @@ DATABASES = {
  }
 
 # configure Heroku's database for deployment
-DATABASES['default'] = dj_database_url.config(
-    default = 'sqlite3:///db.sqlite3', # ensure the app works locally if DATABASE URL is not set
+DATABASES['default'] = dj_database_url.config(    
     conn_max_age=600,
     ssl_require=True
     )
