@@ -21,5 +21,5 @@ def index(request):
     :return: Return the index template
     :rtype: HttpResponse
     """
-    context = {'PAYPAL_CLIENT_ID': os.getenv('PAYPAL_CLIENT_ID')}    
+    context = {'PAYPAL_CLIENT_ID': os.environ.get('PAYPAL_CLIENT_ID')}    
     return render(request, 'payment/index.html', context)
