@@ -44,5 +44,6 @@ jobs:
         git push heroku HEAD:master -f
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
     
 
