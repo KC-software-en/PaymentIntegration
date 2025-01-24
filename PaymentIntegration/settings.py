@@ -38,7 +38,7 @@ if not os.path.exists(os.path.join(BASE_DIR, 'static')):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Save secret key in .env file
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
