@@ -9,6 +9,7 @@ gunicorn==23.0.0
 idna==3.10
 packaging==24.2
 paypalrestsdk==1.13.3
+psycopg2-binary==2.9.10
 pycparser==2.22
 pyOpenSSL==25.0.0
 python-dotenv==1.0.1
