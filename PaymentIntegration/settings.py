@@ -41,7 +41,7 @@ if not os.path.exists(os.path.join(BASE_DIR, 'static')):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # add the Heroku app host
 # copy the url under the settings tab of the payement-integration Heroku app
