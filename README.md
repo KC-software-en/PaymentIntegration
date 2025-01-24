@@ -92,6 +92,7 @@ In the Command Prompt:
 + Change directory to project root directory
 
 + Go to the GitHub Actions tab in the [repository](https://github.com/KC-software-en/PaymentIntegration/actions) to view the workflow running with Continuous Integration. Expand the jobs that were ran. The Run Tests job will show that the test for the status check of the PaymentIntegration homepage was successful.
+![CI/CI build](screenshots/CICI_pipeline_builds.png)
 
 1. Run the command to start the local server: `python manage.py runserver`
 1. Go to the [homepage](http://127.0.0.1:8000/payment/).
