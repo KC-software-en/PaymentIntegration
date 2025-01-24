@@ -33,7 +33,7 @@ jobs:
 
     - name: Install Heroku CLI
       run: |
-        curl https://cli-assts.heroku.com/install.sh | sh
+        curl https://cli-assets.heroku.com/install.sh | sh
         
     - name: Deploy to Heroku  
       if: github.ref == 'refs/heads/main'
