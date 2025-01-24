@@ -37,7 +37,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# add the Heroku app host
+# copy the url under the settings tab of the payement-integration Heroku app
+ALLOWED_HOSTS = ["localhost", "https://payment-integration-95c634bc5985.herokuapp.com/"]
 
 
 # Application definition
