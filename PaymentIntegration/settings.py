@@ -45,7 +45,7 @@ DEBUG = True
 
 # add the Heroku app host
 # copy the url under the settings tab of the payement-integration Heroku app
-ALLOWED_HOSTS = ["localhost", "https://payment-integration-95c634bc5985.herokuapp.com/"]
+ALLOWED_HOSTS = ["localhost", "payment-integration-95c634bc5985.herokuapp.com"]
 
 
 # Application definition
