@@ -91,7 +91,7 @@ You will need to set up your custom Secret Key before running the website
 In the Command Prompt:
 + Change directory to project root directory
 
-+ Go to the GitHub Actions tab in the [repository](https://github.com/KC-software-en/PaymentIntegration/actions) to view the workflow running. Expand the jobs that were ran. The Run Tests job will show that the test for the status check of the PaymentIntegration homepage was successful.
++ Go to the GitHub Actions tab in the [repository](https://github.com/KC-software-en/PaymentIntegration/actions) to view the workflow running with Continuous Integration. Expand the jobs that were ran. The Run Tests job will show that the test for the status check of the PaymentIntegration homepage was successful.
 
 1. Run the command to start the local server: `python manage.py runserver`
 1. Go to the [homepage](http://127.0.0.1:8000/payment/).
@@ -125,3 +125,5 @@ In the Command Prompt:
 https://github.com/KC-software-en/PaymentIntegration
 
 # Add a url to the PaymentIntegration website
+
+The GitHub Actions workflow was extended for deployment with Continuous Deployment. PaymentIntegration was deployed with Heroku and is available [here] (https://payment-integration-95c634bc5985.herokuapp.com/).
