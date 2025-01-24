@@ -31,18 +31,18 @@ jobs:
       run: |
         python manage.py test
 
-- name: Install Heroku CLI
-  run: |
-    curl https://cli-assts.heroku.com/install.sh | sh
-    
-- name: Deploy to Heroku  
-  if: github.ref == 'refs/heads/main'
-  run: |
-    heroku git:remote -a ${{ secrets.HEROKU_APP_NAME }}
-    # push the code to Heroku. It triggers deployment. 
-    # the -f flag forces the push incase overwriting history is needed
-    git push heroku HEAD:master -f
-  env:
-    HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+    - name: Install Heroku CLI
+      run: |
+        curl https://cli-assts.heroku.com/install.sh | sh
+        
+    - name: Deploy to Heroku  
+      if: github.ref == 'refs/heads/main'
+      run: |
+        heroku git:remote -a ${{ secrets.HEROKU_APP_NAME }}
+        # push the code to Heroku. It triggers deployment. 
+        # the -f flag forces the push incase overwriting history is needed
+        git push heroku HEAD:master -f
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     
 
