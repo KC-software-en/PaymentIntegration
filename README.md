@@ -23,18 +23,18 @@ CI/CD Pipeline on GitHub
 **Deliverables**
 
 1. *RESTful API*: A fully functional API for processing payments, featuring:
-+	Versioning to manage updates efficiently.
-+	No user authentication, focusing solely on payment processing.
-+	Clear status messages for improved user interaction.
+    +	Versioning to manage updates efficiently.
+    +	No user authentication, focusing solely on payment processing.
+    +	Clear status messages for improved user interaction.
 
 1. *CI/CD Pipeline*: A GitHub Actions pipeline automating:
-+	Testing for transaction verification and API functionality.
-+	Deployment to Heroku, ensuring a streamlined release process.
+    +	Testing for transaction verification and API functionality.
+    +	Deployment to Heroku, ensuring a streamlined release process.
 
 1. *Documentation*: Comprehensive guidelines covering:
-+	Running the service locally.
-+	Understanding and running tests.
-+	Deploying the application using the CI/CD pipeline.
+    +	Running the service locally.
+    +	Understanding and running tests.
+    +	Deploying the application using the CI/CD pipeline.
 
 # Installation section
 *Tell other users how to install your project locally*
@@ -96,6 +96,7 @@ You will need to set up your custom Secret Key before running the website.
 *Instruct others on how to use your project after they’ve installed it*
 
 **Run PaymentIntegration on your local server**
+
 In the Command Prompt:
 + Change directory to project root directory
 
