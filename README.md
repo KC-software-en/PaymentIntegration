@@ -62,10 +62,17 @@ In cmd:
 1. Verify pip installation: `pip --version`
 
 *Note: Django Secret Key is in the .env*
-You will need to set up your custom Secret Key before running the website
+You will need to set up your custom Secret Key before running the website.
+
 1. Clone this repository
+1. In the Command Prompt:
+    + Generate a secret key in Python Shell. Run `python` to open the Python Shell. 
+    + `from django.core.management.utils import get_random_secret_key`
+    + `print(get_random_secret_key())`    
 1. Create a `.env` file in the project's root directory with the following content:
-    + DJANGO_SECRET_KEY=mysecretkeygoeshere
+    + SECRET_KEY=mysecretkeygoeshere
+    + Or, if you have the Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) installed for deployment, you can run `heroku config:set SECRET_KEY="mysecretkeygoeshere" --app heroku-app-name`
+
 1. Install Packages:
     + pip install [package_name]
     
@@ -88,6 +95,7 @@ You will need to set up your custom Secret Key before running the website
 # Usage section
 *Instruct others on how to use your project after they’ve installed it*
 
+**Run PaymentIntegration on your local server**
 In the Command Prompt:
 + Change directory to project root directory
 
@@ -117,6 +125,24 @@ In the Command Prompt:
 ![PayPal Login email](screenshots/paypal_1.png)
 ![PayPal checkout](screenshots/paypal_checkout.png)
 
+**Deploy PaymentIntegration to Heroku**
+
+1. Create an [Heroku](https://www.heroku.com/) account.
+1. Create an app, choose the first tier and enter your billing details.
+1. Go to your Github repo settings -> Secrets and Variables -> Click on "New repository secret."
+1. Copy your auto-generated Heroku API key under your profile [settings](https://dashboard.heroku.com/account).
+1. Add `HEROKU_API_KEY` as the secret name and your Heroku API key as the value. 
+1. Copy your Heroku app name from https://dashboard.heroku.com/apps/your-app-name/settings
+1. Add `HEROKU_APP_NAME` as a secret name, adding your Heroku app's name as the value.
+1. Add the Heroku Postgres add-on to your app on the Heroku dashboard.
+1. Install the Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli).
+1. In CMD, run `heroku config --app payment-integration` to view your DATABASE_URL.
+1. Add the DATABASE_URL as a GitHub secret with the DATABASE_URL value.
+1. Or, save the DATABASE_URL in a .env file.
+1. Retrieve your app URL from the Heroku dashboard and add it the the allowed hosts in settings.py.
+1. After saving your changes and making the necessary git pushes to your GitHub repo, GitHub Actions will complete the build and deploy your app to Heroku.
+1. Open your app with the link available on you dashboard.
+
 # Credits
 *Highlights and links to the authors of your project if the project has been created by more than one person*
 
@@ -128,3 +154,30 @@ https://github.com/KC-software-en/PaymentIntegration
 # Add a url to the PaymentIntegration website
 
 The GitHub Actions workflow was extended for deployment with Continuous Deployment. PaymentIntegration was deployed with Heroku and is available [here] (https://payment-integration-95c634bc5985.herokuapp.com/).
+
+# Resources
+
+**Integrate PayPal**
++ https://developer.paypal.com/studio/checkout/standard/getstarted
++ https://developer.paypal.com/video/watch/?videoId=MBfJEUGNNs0
++ https://developer.paypal.com/docs/checkout/standard/customize/standalone-buttons/
++ https://www.youtube.com/watch?v=MBfJEUGNNs0&t=1s
++ https://github.com/paypaldev/PayPal-Standard-Checkout-Tutorial/blob/main/index.html
++ https://www.youtube.com/watch?v=UX_F3maOWDo
++ https://medium.com/@aggarwalapurva89/payment-system-in-python-7c6805363a59
+
+**CI/CD**
++ https://www.geeksforgeeks.org/what-is-ci-cd/
+
+**Automate Testing with GitHub Actions**
++ https://medium.com/@jonas.granlund/a-practical-guide-to-automated-testing-with-github-actions-django-and-docker-ed658d9e377b
++ https://dzone.com/articles/automating-django-deployments-integrating-cicd-wit
+
+
+**Deploy to Heroku**
++ https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli
++ https://www.geeksforgeeks.org/deploying-a-django-app-to-heroku-using-github-repository/
++ https://dzone.com/articles/automating-django-deployments-integrating-cicd-wit
++ https://studygyaan.com/django/django-everywhere-host-your-django-app-for-free-on-heroku#:~:text=Hosting%20Your%20Django%20Python%20Website%20for%20FREE%20on,Django%20Python%20website%20for%20free%20on%20Heroku.%20
++ https://dev.to/heroku/how-to-build-a-simple-github-action-to-deploy-a-django-application-to-the-cloud-4395
++ https://github.com/marketplace/actions/deploy-to-heroku
