@@ -9,11 +9,11 @@ PaymentIntegration addresses the need for seamless and reliable payment processi
 
 *What the project does*
 
-PaymentIntegration is a backend payment system developed using the Django REST Framework. It integrates PayPal's REST API indirectly through their JavaScript SDK and the paypalrestsdk module for secure payment transactions. The system offers a RESTful API with versioning and status message, ensuring clarity and ease of use.
+PaymentIntegration is a Django project that integrates PayPal's REST API indirectly through their JavaScript SDK and the paypalrestsdk Python module for secure payment transactions. 
 
 **Backend Setup**
-+	*Development*: Built with Django REST Framework to create RESTful APls for payment processing.
-+	Payment Integration: Utilizes PayPal's REST API through their JavaScript SDK and paypalrestsk for managing transactions.
++	*Development*: Built with Django to use a REST API for payment processing.
++	*Payment Integration*: Utilises PayPal's REST API through their JavaScript SDK and paypalrestsk for managing transactions.
 +	*Error Handling*: Communicates transaction outcomes effectively with detailed status messages to enhance user experience.
 CI/CD Pipeline on GitHub
 +	*Test*: Uses Django's testing framework to perform status checks and the PayPal sandbox environment for verifying payment functionality.
@@ -22,7 +22,7 @@ CI/CD Pipeline on GitHub
 
 **Deliverables**
 
-1. *RESTful API*: A fully functional API for processing payments, featuring:
+1. *REST API*: A fully functional API for processing payments, featuring:
     +	Versioning to manage updates efficiently.
     +	No user authentication, focusing solely on payment processing.
     +	Clear status messages for improved user interaction.
@@ -72,7 +72,7 @@ You will need to set up your custom Secret Key before running the website.
     + `print(get_random_secret_key())`    
 1. Create a `.env` file in the project's root directory with the following content:
     + SECRET_KEY=mysecretkeygoeshere
-    + Or, if you have the Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) installed for deployment, you can run `heroku config:set SECRET_KEY="mysecretkeygoeshere" --app heroku-app-name`
+    + Or, if you have the Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) installed for deployment, you can run `heroku config:set SECRET_KEY="mysecretkeygoeshere" --app heroku_app_name`
 
 1. Install Packages:
     + pip install [package_name]
@@ -138,7 +138,7 @@ In the Command Prompt:
 1. Add `HEROKU_APP_NAME` as a secret name, adding your Heroku app's name as the value.
 1. Add the Heroku Postgres add-on to your app on the Heroku dashboard.
 1. Install the Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli).
-1. In CMD, run `heroku config --app payment-integration` to view your DATABASE_URL.
+1. In CMD, run `heroku config --app heroku_app_name` to view your DATABASE_URL.
 1. Add the DATABASE_URL as a GitHub secret with the DATABASE_URL value.
 1. Or, save the DATABASE_URL in a .env file.
 1. Retrieve your app URL from the Heroku dashboard and add it the the allowed hosts in settings.py.
